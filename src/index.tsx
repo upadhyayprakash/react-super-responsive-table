@@ -20,9 +20,30 @@ const Button = styled.button<ButtonProps>`
   border-radius: 3px;
   border: 2px solid palevioletred;
   color: palevioletred;
-  margin: 0.5em 1em;
-  padding: 0.5em 1em;
-
+  ${({ size }) => {
+    switch (size) {
+      case Sizes.lg:
+        return css`
+          padding: 1em 2em;
+          font-size: 1.5rem;
+        `;
+      case Sizes.md:
+        return css`
+          padding: 0.5em 1em;
+          font-size: 1rem;
+        `;
+      case Sizes.sm:
+        return css`
+          padding: 0.25em 0.5em;
+          font-size: 0.75rem;
+        `;
+      default:
+        return css`
+          padding: 0.5em 1em;
+          font-size: 1rem;
+        `;
+    }
+  }}
   ${(props) =>
     props.primary &&
     css`
