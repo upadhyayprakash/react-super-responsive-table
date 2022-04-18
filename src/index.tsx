@@ -1,6 +1,14 @@
 import React, { FC, ReactNode } from "react";
 import styled, { css } from "styled-components";
 
+export const __VERSION__ = () => {
+  return "[VI]{version}[/VI]";
+};
+
+export const __BUILD_DATE__ = () => {
+  return "[VI]{date}[/VI]";
+};
+
 /**
  * Enum Reference: https://www.typescriptlang.org/docs/handbook/enums.html
  */
@@ -56,33 +64,17 @@ const Container = styled.div`
   text-align: center;
 `;
 
-const VersionInfo = styled.div`
-  border: 1px solid grey;
-  padding: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export type StyledButtonProps = {
   size?: Sizes;
   children?: ReactNode;
 };
 
 const StyledButton: FC<StyledButtonProps> = ({ size = Sizes.md, children }) => {
-  const getVersion = () => {
-    return "[VI]{version} - {date}[/VI]";
-  };
-
   return (
     <Container>
       <Button primary size={size}>
         {children || "Button"}
       </Button>
-      <VersionInfo>
-        <p>Build Date: {getVersion()}</p>
-        <p>Build Version: {getVersion()}</p>
-      </VersionInfo>
     </Container>
   );
 };
