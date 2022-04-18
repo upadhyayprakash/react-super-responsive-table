@@ -1,8 +1,14 @@
 import React, { FC, ReactNode } from "react";
 import styled, { css } from "styled-components";
 
+/**
+ * Fetches the package version from package.json
+ */
 export const __VERSION__ = "[VI]{version}[/VI]";
 
+/**
+ * Gets the build timestamp
+ */
 export const __BUILD_DATE__ = "[VI]{date}[/VI]";
 
 /**
@@ -60,11 +66,21 @@ const Container = styled.div`
   text-align: center;
 `;
 
+/**
+ * Type definition:
+ * - size: size of the button decides its padding and font-size
+ * - children?: children are rendered as it is
+ */
 export type StyledButtonProps = {
   size?: Sizes;
   children?: ReactNode;
 };
 
+/**
+ * Functional React component for StyledButton
+ * Props:
+ * - size: Sizes
+ */
 const StyledButton: FC<StyledButtonProps> = ({ size = Sizes.md, children }) => {
   return (
     <Container>

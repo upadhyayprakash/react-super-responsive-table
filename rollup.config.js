@@ -33,7 +33,7 @@ export default {
       ],
     }),
     commonjs(),
-    NODE_ENV === "production" && terser(),
+    NODE_ENV === "production" && terser({format: {comments: false}}),
     NODE_ENV === "production" &&
       replace({
         exclude: "node_modules/**",
