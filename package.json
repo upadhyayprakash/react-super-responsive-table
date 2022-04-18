@@ -18,7 +18,15 @@
     "type": "git",
     "url": "git+https://github.com/upadhyayprakash/react-super-responsive-table.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "table",
+    "card",
+    "responsive",
+    "styled-components",
+    "typescript",
+    "rollup"
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {
