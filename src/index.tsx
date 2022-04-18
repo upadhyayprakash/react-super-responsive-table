@@ -1,13 +1,9 @@
 import React, { FC, ReactNode } from "react";
 import styled, { css } from "styled-components";
 
-export const __VERSION__ = () => {
-  return "[VI]{version}[/VI]";
-};
+export const __VERSION__ = "[VI]{version}[/VI]";
 
-export const __BUILD_DATE__ = () => {
-  return "[VI]{date}[/VI]";
-};
+export const __BUILD_DATE__ = "[VI]{date}[/VI]";
 
 /**
  * Enum Reference: https://www.typescriptlang.org/docs/handbook/enums.html
