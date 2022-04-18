@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 /**
  * Enum Reference: https://www.typescriptlang.org/docs/handbook/enums.html
  */
-enum Sizes {
+export enum Sizes {
   lg,
   md,
   sm,
