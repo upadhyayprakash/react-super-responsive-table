@@ -1,2 +1,2 @@
-# react-super-responsive-table
+# react-table-card-responsive
 Super responsive react table component
